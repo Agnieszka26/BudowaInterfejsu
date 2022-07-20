@@ -1,27 +1,29 @@
 import "bootstrap";
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import {useCookies} from "react-cookie";
+
 
 const UserProfile = () => {
-  const [cookies] = useCookies();
-
+  const id = localStorage.getItem("id");
+  const name = localStorage.getItem("name");
+  const phone = localStorage.getItem("phone");
+  const car = localStorage.getItem("car");
   return (
     <Container>
       <h2> User Detail </h2>
       <Container>
         <Col>
           <Row>
-            <p> id: {cookies.id} </p>
+            <p> id: {id} </p>
           </Row>
           <Row>
-            <p> name: {cookies.name}</p>
+            <p> name: {name}</p>
           </Row>
           <Row>
-            <p> phone: {cookies.phone} </p>
+            <p> phone: {phone} </p>
           </Row>
           <Row>
-            <p> car: {cookies.car} </p>
+            <p> car: {car} </p>
           </Row>
         </Col>
       </Container>
