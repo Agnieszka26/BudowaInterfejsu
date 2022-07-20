@@ -1,12 +1,11 @@
 import "bootstrap";
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import {Container, Table} from "react-bootstrap";
 import User from "../Users/User";
 
 const UserList = (users) => {
   return (
     <>
-
       <Container>
         <Table striped bordered hover>
           <thead>
@@ -22,15 +21,13 @@ const UserList = (users) => {
               const {id, name, phone, car} = user;
 
               return (
-                <>
-                  <User
-                    id={id}
-                    name={name}
-                    phone={phone}
-                    key={id + name}
-                    car={car}
-                  />
-                </>
+                <User
+                  id={id}
+                  name={name}
+                  phone={phone}
+                  key={id + name}
+                  car={car}
+                />
               );
             })}
           </tbody>

@@ -4,11 +4,10 @@ import {useNavigate} from "react-router-dom";
 import {useCookies} from "react-cookie";
 
 const User = ({id, name, phone, car}) => {
-  const [setCookie] = useCookies(["cookie-name"]);
+  const [cookies, setCookie] = useCookies(["id", "name", "phone", "car"]);
   const navigate = useNavigate();
 
   const handleSetCookies = (id, name, phone, car) => {
-    console.log("setting cookies");
     setCookie("id", id, {path: "/"});
     setCookie("name", name, {path: "/"});
     setCookie("phone", phone, {path: "/"});
